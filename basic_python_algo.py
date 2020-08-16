@@ -298,6 +298,10 @@ if __name__ == '__main__':
         p.start()
 
 
+# 1. transpose of a matrix
+matrix = [[1,2,3,4],[4,5,6,7]]
+transp_matrix = [[row[i] for row in matrix]for i in range(len(matrix[0])) ]
+
 
 ####################################################################################################
 
