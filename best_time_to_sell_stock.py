@@ -16,3 +16,4 @@ def maxProfit(prices:List[int])->int:
         if prices[i] < start and prices[i] < min(prices[:i]):
             start = prices[i]
     return max_profit
+
