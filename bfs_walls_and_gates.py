@@ -22,12 +22,14 @@ def wallsAndGates(self, rooms: List[List[int]]) -> None:
     row, col = len(rooms), len(rooms[0])
     q = collections.deque()
 
-    #find all 0 index 
+    #find all 0 index, and append in a queue to be process 
     for r in range(row):
         for c in range(col):
             if rooms[r][c] == 0:
                 q.append((r,c))
     
+    # while there is nodes in q to be process, 
+    # process each node by taking one step left, right, up and down 
     while q:
         r, c =  q.popleft()
         for i, j in [(-1,0),(1,0),(0,-1),(0,1)]:
@@ -53,3 +55,4 @@ def wallsAndGates(self, rooms: List[List[int]]) -> None:
 
 
 #The only differences between the BFS and DFS is, BFS used a queue to store all the visited cells 
+
